@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7fed5a59-75da-4d6e-ad96-3c27332705ca" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="recommendsystem@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="recommendsystem@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="recommendsystem@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="recommendsystem: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Vm62xdR0vbRQ5PTdzmTPd1oXSp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../douban_spider/douban_spider/spiders/douban.py" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.selenium_tool">
+    <configuration name="distence" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="spider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/movieInfoSpider/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/movieInfoSpider/tools/distence.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="selenium_tool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="spider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/movieInfoSpider/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/movieInfoSpider/tools/selenium_tool.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.selenium_tool" />
+        <item itemvalue="Python.distence" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:recommendsystem@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7fed5a59-75da-4d6e-ad96-3c27332705ca" name="Default Changelist" comment="" />
+      <created>1577845719745</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577845719745</updated>
+      <workItem from="1577845721335" duration="2766000" />
+      <workItem from="1577891206126" duration="2232000" />
+      <workItem from="1577921721169" duration="7639000" />
+      <workItem from="1577973569453" duration="5277000" />
+      <workItem from="1578008363376" duration="8828000" />
+      <workItem from="1578017937099" duration="11943000" />
+      <workItem from="1578038478292" duration="19057000" />
+      <workItem from="1578059925216" duration="4511000" />
+      <workItem from="1578098148047" duration="487000" />
+      <workItem from="1578458969514" duration="1885000" />
+      <workItem from="1578482120529" duration="954000" />
+      <workItem from="1578484742324" duration="11227000" />
+      <workItem from="1578535219681" duration="4991000" />
+      <workItem from="1578541180133" duration="45315000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="434" y="162" width="1164" height="759" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578552296449">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state x="434" y="162" width="1164" height="759" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.44.1920.1036@0.44.1920.1036" timestamp="1578552296449" />
+    <state x="706" y="314" key="FileChooserDialogImpl" timestamp="1578595027539">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state x="706" y="314" key="FileChooserDialogImpl/0.44.1920.1036@0.44.1920.1036" timestamp="1578595027539" />
+    <state width="1866" height="405" key="GridCell.Tab.0.bottom" timestamp="1578498379785">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1866" height="405" key="GridCell.Tab.0.bottom/0.44.1920.1036@0.44.1920.1036" timestamp="1578498379785" />
+    <state width="1866" height="405" key="GridCell.Tab.0.center" timestamp="1578498379783">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1866" height="405" key="GridCell.Tab.0.center/0.44.1920.1036@0.44.1920.1036" timestamp="1578498379783" />
+    <state width="1866" height="405" key="GridCell.Tab.0.left" timestamp="1578498379782">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1866" height="405" key="GridCell.Tab.0.left/0.44.1920.1036@0.44.1920.1036" timestamp="1578498379782" />
+    <state width="1866" height="405" key="GridCell.Tab.0.right" timestamp="1578498379784">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1866" height="405" key="GridCell.Tab.0.right/0.44.1920.1036@0.44.1920.1036" timestamp="1578498379784" />
+    <state width="1866" height="300" key="GridCell.Tab.1.bottom" timestamp="1578038442579">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1866" height="300" key="GridCell.Tab.1.bottom/0.44.1920.1036@0.44.1920.1036" timestamp="1578038442579" />
+    <state width="1866" height="300" key="GridCell.Tab.1.center" timestamp="1578038442574">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1866" height="300" key="GridCell.Tab.1.center/0.44.1920.1036@0.44.1920.1036" timestamp="1578038442574" />
+    <state width="1866" height="300" key="GridCell.Tab.1.left" timestamp="1578038442574">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1866" height="300" key="GridCell.Tab.1.left/0.44.1920.1036@0.44.1920.1036" timestamp="1578038442574" />
+    <state width="1866" height="300" key="GridCell.Tab.1.right" timestamp="1578038442578">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1866" height="300" key="GridCell.Tab.1.right/0.44.1920.1036@0.44.1920.1036" timestamp="1578038442578" />
+    <state width="335" height="606" key="HiddenNamespacesPopup" timestamp="1578551055741">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="335" height="606" key="HiddenNamespacesPopup/0.44.1920.1036@0.44.1920.1036" timestamp="1578551055741" />
+    <state x="472" y="290" width="976" height="551" key="IDE.errors.dialog" timestamp="1578459038165">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state x="472" y="290" width="976" height="551" key="IDE.errors.dialog/0.44.1920.1036@0.44.1920.1036" timestamp="1578459038165" />
+    <state x="0" y="44" width="1920" height="1036" key="SettingsEditor" timestamp="1578535301654">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state x="0" y="44" width="1920" height="1036" key="SettingsEditor/0.44.1920.1036@0.44.1920.1036" timestamp="1578535301654" />
+    <state x="1083" y="272" width="711" height="678" key="search.everywhere.popup" timestamp="1578490876144">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state x="1083" y="272" width="711" height="678" key="search.everywhere.popup/0.44.1920.1036@0.44.1920.1036" timestamp="1578490876144" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/spider$gap.coverage" NAME="distence Coverage Results" MODIFIED="1578038358355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider/tools" />
+    <SUITE FILE_PATH="coverage/spider$distence.coverage" NAME="distence Coverage Results" MODIFIED="1578053708251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider/tools" />
+    <SUITE FILE_PATH="coverage/spider$selenium.coverage" NAME="selenium_tool Coverage Results" MODIFIED="1578049183463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider/tools" />
+    <SUITE FILE_PATH="coverage/spider$test.coverage" NAME="test Coverage Results" MODIFIED="1578049287938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider" />
+    <SUITE FILE_PATH="coverage/spider$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1578049542104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$selenium_tool.coverage" NAME="selenium_tool Coverage Results" MODIFIED="1578496231647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider/tools" />
+  </component>
+</project>
