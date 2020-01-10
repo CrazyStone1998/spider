@@ -1,7 +1,7 @@
 import pymysql
 from movieInfoSpider import settings
 from movieInfoSpider import items
-
+from scrapy.exceptions import DropItem
 
 class MovieItemPipeline(object):
 
@@ -12,7 +12,7 @@ class MovieItemPipeline(object):
             port=settings.MYSQL_PORT,
             db=settings.MYSQL_DBNAME,
             user=settings.MYSQL_USER,
-            passed=settings.MYSQL_PASSWORD,
+            passwd=settings.MYSQL_PASSWORD,
             charset=settings.MYSQL_CHARSET,
         )
         self.cursor = self.connect.cursor()
@@ -21,10 +21,25 @@ class MovieItemPipeline(object):
         self.connect.close()
 
     def process_item(self, item, spider):
-
+        if isinstance(item, items.Movie):
+            self._insert_movie(item)
+            raise DropItem('Has Done')
         return item
 
     def _insert_movie(self, item):
-
-        pass
-
+        sql = 'insert into spider.movie' \
+              '(name,area,cover_url,language,length,rate,rate_num,release_date,url_douban,url_imdb) ' \
+              'value (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);'
+        self.cursor.execute(sql, (
+            item['name'],
+            item['area'],
+            item['cover_url'],
+            item['language'],
+            item['length'],
+            item['rate'],
+            item['rate_num'],
+            item['release_date'],
+            item['url_douban'],
+            item['url_imdb']
+        ))
+        self.connect.commit()

@@ -74,7 +74,7 @@ class Comment(scrapy.Item):
     rate = scrapy.Field()
     content = scrapy.Field()
     date = scrapy.Field()
-    vote = scrapy.Field()
+    votes = scrapy.Field()
 
 class Review(scrapy.Item):
     user_id = scrapy.Field()

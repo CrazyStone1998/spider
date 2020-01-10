@@ -7,23 +7,23 @@
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
       <DefaultCasing>exact</DefaultCasing>
     </root>
-    <schema id="2" parent="1" name="demo">
-      <Collation>utf8mb4_unicode_ci</Collation>
-    </schema>
-    <schema id="3" parent="1" name="information_schema">
+    <schema id="2" parent="1" name="information_schema">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="4" parent="1" name="mall">
+    <schema id="3" parent="1" name="mall">
       <Collation>utf8mb4_unicode_ci</Collation>
     </schema>
-    <schema id="5" parent="1" name="mysql">
+    <schema id="4" parent="1" name="mysql">
       <Collation>utf8mb4_unicode_ci</Collation>
     </schema>
-    <schema id="6" parent="1" name="performance_schema">
+    <schema id="5" parent="1" name="performance_schema">
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </schema>
-    <schema id="7" parent="1" name="recommendsystem">
+    <schema id="6" parent="1" name="recommendsystem">
       <Current>1</Current>
+      <Collation>utf8mb4_unicode_ci</Collation>
+    </schema>
+    <schema id="7" parent="1" name="spider">
       <Collation>utf8mb4_unicode_ci</Collation>
     </schema>
     <schema id="8" parent="1" name="sys">
@@ -1117,22 +1117,22 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="281" parent="7" name="comment"/>
-    <table id="282" parent="7" name="director_screenwriter"/>
-    <table id="283" parent="7" name="genre"/>
-    <table id="284" parent="7" name="hibernate_sequence"/>
-    <table id="285" parent="7" name="movie"/>
-    <table id="286" parent="7" name="movie_director_relation"/>
-    <table id="287" parent="7" name="movie_genre_relation"/>
-    <table id="288" parent="7" name="movie_screenwriter_relation"/>
-    <table id="289" parent="7" name="movie_starring_relation"/>
-    <table id="290" parent="7" name="permission"/>
-    <table id="291" parent="7" name="review"/>
-    <table id="292" parent="7" name="role"/>
-    <table id="293" parent="7" name="role_permission_relation"/>
-    <table id="294" parent="7" name="starring"/>
-    <table id="295" parent="7" name="user"/>
-    <table id="296" parent="7" name="user_role_relation"/>
+    <table id="281" parent="6" name="comment"/>
+    <table id="282" parent="6" name="director_screenwriter"/>
+    <table id="283" parent="6" name="genre"/>
+    <table id="284" parent="6" name="hibernate_sequence"/>
+    <table id="285" parent="6" name="movie"/>
+    <table id="286" parent="6" name="movie_director_relation"/>
+    <table id="287" parent="6" name="movie_genre_relation"/>
+    <table id="288" parent="6" name="movie_screenwriter_relation"/>
+    <table id="289" parent="6" name="movie_starring_relation"/>
+    <table id="290" parent="6" name="permission"/>
+    <table id="291" parent="6" name="review"/>
+    <table id="292" parent="6" name="role"/>
+    <table id="293" parent="6" name="role_permission_relation"/>
+    <table id="294" parent="6" name="starring"/>
+    <table id="295" parent="6" name="user"/>
+    <table id="296" parent="6" name="user_role_relation"/>
     <column id="297" parent="281" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>

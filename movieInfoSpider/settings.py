@@ -64,9 +64,15 @@ COOKIES_DEBUG = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'movieInfoSpider.pipelines.MovieinfospiderPipeline': 300,
-# }
+ITEM_PIPELINES = {
+
+   'movieInfoSpider.pipelinesMiddlewares.MovieItem.MovieItemPipeline': 500,
+   'movieInfoSpider.pipelinesMiddlewares.OtherItem.OtherItemPipeline': 500,
+   'movieInfoSpider.pipelinesMiddlewares.ReviewItem.ReviewItemPipeline': 500,
+   'movieInfoSpider.pipelinesMiddlewares.CommentItem.CommentItemPipeline': 500,
+   'movieInfoSpider.pipelinesMiddlewares.RepeatFilter.RepeatFilterPipeline': 300,
+
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -91,6 +97,7 @@ COOKIES_DEBUG = True
 
 # DATABASE mysql
 MYSQL_HOST = '127.0.0.1'
+MYSQL_PORT = 3306
 MYSQL_DBNAME = 'recommendsystem'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = ''

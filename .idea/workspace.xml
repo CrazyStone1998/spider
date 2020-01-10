@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7fed5a59-75da-4d6e-ad96-3c27332705ca" name="Default Changelist" comment="" />
+    <list default="true" id="7fed5a59-75da-4d6e-ad96-3c27332705ca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9261445d-1154-40a1-9e31-e811fd53414b.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9261445d-1154-40a1-9e31-e811fd53414b/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae0bcb85-aed2-41a1-8e91-6fb67b26b2eb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ae0bcb85-aed2-41a1-8e91-6fb67b26b2eb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bd95606f-9ffc-4bf3-90e1-7abd2c56ad2c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bd95606f-9ffc-4bf3-90e1-7abd2c56ad2c/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e21b153d-49fb-4109-a353-5d1b5b2e9f78.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e21b153d-49fb-4109-a353-5d1b5b2e9f78/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movieInfoSpider/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/CommentItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/CommentItem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/MovieItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/MovieItem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/OtherItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/OtherItem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/RepeatFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/RepeatFilter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/ReviewItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/ReviewItem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movieInfoSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movieInfoSpider/spiders/doubanSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/spiders/doubanSpider.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,18 +39,32 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="recommendsystem@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="spider@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="recommendsystem@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="spider@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="recommendsystem@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="spider@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="recommendsystem: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="spider: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="spider@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="spider: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="comment: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="spider@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="spider: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="director_screenwriter: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -44,7 +76,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Vm62xdR0vbRQ5PTdzmTPd1oXSp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -53,11 +91,12 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../douban_spider/douban_spider/spiders/douban.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../douban_spider/douban_spider/pipelines.py" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.selenium_tool">
+  <component name="RunManager" selected="Python.test">
     <configuration name="distence" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="spider" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,8 +141,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="spider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.selenium_tool" />
         <item itemvalue="Python.distence" />
       </list>
@@ -117,7 +179,17 @@
             <expand>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:recommendsystem@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="root:spider@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:spider@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@ba79aec" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:spider@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@58a90d95" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -149,7 +221,8 @@
       <workItem from="1578482120529" duration="954000" />
       <workItem from="1578484742324" duration="11227000" />
       <workItem from="1578535219681" duration="4991000" />
-      <workItem from="1578541180133" duration="45315000" />
+      <workItem from="1578541180133" duration="45519000" />
+      <workItem from="1578624207097" duration="32781000" />
     </task>
     <servers />
   </component>
@@ -157,30 +230,38 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="434" y="162" width="1164" height="759" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578552296449">
+    <state x="559" y="217" key="#Postfix_Completion" timestamp="1578646689683">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state x="434" y="162" width="1164" height="759" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.44.1920.1036@0.44.1920.1036" timestamp="1578552296449" />
-    <state x="706" y="314" key="FileChooserDialogImpl" timestamp="1578595027539">
+    <state x="559" y="217" key="#Postfix_Completion/0.44.1920.1036@0.44.1920.1036" timestamp="1578646689683" />
+    <state x="434" y="162" width="1164" height="759" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578637718139">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state x="706" y="314" key="FileChooserDialogImpl/0.44.1920.1036@0.44.1920.1036" timestamp="1578595027539" />
-    <state width="1866" height="405" key="GridCell.Tab.0.bottom" timestamp="1578498379785">
+    <state x="434" y="162" width="1164" height="759" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.44.1920.1036@0.44.1920.1036" timestamp="1578637718139" />
+    <state x="552" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578640198898">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1866" height="405" key="GridCell.Tab.0.bottom/0.44.1920.1036@0.44.1920.1036" timestamp="1578498379785" />
-    <state width="1866" height="405" key="GridCell.Tab.0.center" timestamp="1578498379783">
+    <state x="552" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.44.1920.1036@0.44.1920.1036" timestamp="1578640198898" />
+    <state x="706" y="314" key="FileChooserDialogImpl" timestamp="1578642221912">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1866" height="405" key="GridCell.Tab.0.center/0.44.1920.1036@0.44.1920.1036" timestamp="1578498379783" />
-    <state width="1866" height="405" key="GridCell.Tab.0.left" timestamp="1578498379782">
+    <state x="706" y="314" key="FileChooserDialogImpl/0.44.1920.1036@0.44.1920.1036" timestamp="1578642221912" />
+    <state width="1866" height="171" key="GridCell.Tab.0.bottom" timestamp="1578666861896">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1866" height="405" key="GridCell.Tab.0.left/0.44.1920.1036@0.44.1920.1036" timestamp="1578498379782" />
-    <state width="1866" height="405" key="GridCell.Tab.0.right" timestamp="1578498379784">
+    <state width="1866" height="171" key="GridCell.Tab.0.bottom/0.44.1920.1036@0.44.1920.1036" timestamp="1578666861896" />
+    <state width="1866" height="171" key="GridCell.Tab.0.center" timestamp="1578666861895">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1866" height="405" key="GridCell.Tab.0.right/0.44.1920.1036@0.44.1920.1036" timestamp="1578498379784" />
+    <state width="1866" height="171" key="GridCell.Tab.0.center/0.44.1920.1036@0.44.1920.1036" timestamp="1578666861895" />
+    <state width="1866" height="171" key="GridCell.Tab.0.left" timestamp="1578666861894">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1866" height="171" key="GridCell.Tab.0.left/0.44.1920.1036@0.44.1920.1036" timestamp="1578666861894" />
+    <state width="1866" height="171" key="GridCell.Tab.0.right" timestamp="1578666861896">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1866" height="171" key="GridCell.Tab.0.right/0.44.1920.1036@0.44.1920.1036" timestamp="1578666861896" />
     <state width="1866" height="300" key="GridCell.Tab.1.bottom" timestamp="1578038442579">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
@@ -209,6 +290,10 @@
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
     <state x="0" y="44" width="1920" height="1036" key="SettingsEditor/0.44.1920.1036@0.44.1920.1036" timestamp="1578535301654" />
+    <state x="380" y="140" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578666671067">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state x="380" y="140" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.44.1920.1036@0.44.1920.1036" timestamp="1578666671067" />
     <state x="1083" y="272" width="711" height="678" key="search.everywhere.popup" timestamp="1578490876144">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
@@ -218,8 +303,8 @@
     <SUITE FILE_PATH="coverage/spider$gap.coverage" NAME="distence Coverage Results" MODIFIED="1578038358355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider/tools" />
     <SUITE FILE_PATH="coverage/spider$distence.coverage" NAME="distence Coverage Results" MODIFIED="1578053708251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider/tools" />
     <SUITE FILE_PATH="coverage/spider$selenium.coverage" NAME="selenium_tool Coverage Results" MODIFIED="1578049183463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider/tools" />
-    <SUITE FILE_PATH="coverage/spider$test.coverage" NAME="test Coverage Results" MODIFIED="1578049287938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider" />
     <SUITE FILE_PATH="coverage/spider$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1578049542104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$test.coverage" NAME="test Coverage Results" MODIFIED="1578666861881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spider$selenium_tool.coverage" NAME="selenium_tool Coverage Results" MODIFIED="1578496231647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider/tools" />
   </component>
 </project>
