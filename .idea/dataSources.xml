@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="recommendsystem@localhost" uuid="ae0bcb85-aed2-41a1-8e91-6fb67b26b2eb">
+    <data-source source="LOCAL" name="spider@localhost" uuid="ab11d12b-ad72-489d-bc49-4a7bf68dd7ea">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/recommendsystem</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/spider</jdbc-url>
     </data-source>
   </component>
 </project>
