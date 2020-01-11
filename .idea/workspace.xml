@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fed5a59-75da-4d6e-ad96-3c27332705ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9261445d-1154-40a1-9e31-e811fd53414b.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9261445d-1154-40a1-9e31-e811fd53414b/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae0bcb85-aed2-41a1-8e91-6fb67b26b2eb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ae0bcb85-aed2-41a1-8e91-6fb67b26b2eb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bd95606f-9ffc-4bf3-90e1-7abd2c56ad2c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bd95606f-9ffc-4bf3-90e1-7abd2c56ad2c/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e21b153d-49fb-4109-a353-5d1b5b2e9f78.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e21b153d-49fb-4109-a353-5d1b5b2e9f78/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae0bcb85-aed2-41a1-8e91-6fb67b26b2eb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae0bcb85-aed2-41a1-8e91-6fb67b26b2eb/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/CommentItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/CommentItem.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/MovieItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/MovieItem.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/OtherItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/OtherItem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/RepeatFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/RepeatFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/ReviewItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/ReviewItem.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movieInfoSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movieInfoSpider/spiders/doubanSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/spiders/doubanSpider.py" afterDir="false" />
     </list>
@@ -184,12 +174,17 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:spider@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@ba79aec" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@4c5c081d" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:spider@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@58a90d95" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@3e16e50" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:spider@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@5a410925" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -222,7 +217,11 @@
       <workItem from="1578484742324" duration="11227000" />
       <workItem from="1578535219681" duration="4991000" />
       <workItem from="1578541180133" duration="45519000" />
-      <workItem from="1578624207097" duration="32781000" />
+      <workItem from="1578624207097" duration="33083000" />
+      <workItem from="1578668702639" duration="1548000" />
+      <workItem from="1578670686963" duration="122000" />
+      <workItem from="1578670918615" duration="638000" />
+      <workItem from="1578719510071" duration="1239000" />
     </task>
     <servers />
   </component>
@@ -246,22 +245,22 @@
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
     <state x="706" y="314" key="FileChooserDialogImpl/0.44.1920.1036@0.44.1920.1036" timestamp="1578642221912" />
-    <state width="1866" height="171" key="GridCell.Tab.0.bottom" timestamp="1578666861896">
+    <state width="1285" height="240" key="GridCell.Tab.0.bottom" timestamp="1578668760195">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1866" height="171" key="GridCell.Tab.0.bottom/0.44.1920.1036@0.44.1920.1036" timestamp="1578666861896" />
-    <state width="1866" height="171" key="GridCell.Tab.0.center" timestamp="1578666861895">
+    <state width="1285" height="240" key="GridCell.Tab.0.bottom/0.44.1920.1036@0.44.1920.1036" timestamp="1578668760195" />
+    <state width="1285" height="240" key="GridCell.Tab.0.center" timestamp="1578668760195">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1866" height="171" key="GridCell.Tab.0.center/0.44.1920.1036@0.44.1920.1036" timestamp="1578666861895" />
-    <state width="1866" height="171" key="GridCell.Tab.0.left" timestamp="1578666861894">
+    <state width="1285" height="240" key="GridCell.Tab.0.center/0.44.1920.1036@0.44.1920.1036" timestamp="1578668760195" />
+    <state width="1285" height="240" key="GridCell.Tab.0.left" timestamp="1578668760194">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1866" height="171" key="GridCell.Tab.0.left/0.44.1920.1036@0.44.1920.1036" timestamp="1578666861894" />
-    <state width="1866" height="171" key="GridCell.Tab.0.right" timestamp="1578666861896">
+    <state width="1285" height="240" key="GridCell.Tab.0.left/0.44.1920.1036@0.44.1920.1036" timestamp="1578668760194" />
+    <state width="1285" height="240" key="GridCell.Tab.0.right" timestamp="1578668760195">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1866" height="171" key="GridCell.Tab.0.right/0.44.1920.1036@0.44.1920.1036" timestamp="1578666861896" />
+    <state width="1285" height="240" key="GridCell.Tab.0.right/0.44.1920.1036@0.44.1920.1036" timestamp="1578668760195" />
     <state width="1866" height="300" key="GridCell.Tab.1.bottom" timestamp="1578038442579">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>

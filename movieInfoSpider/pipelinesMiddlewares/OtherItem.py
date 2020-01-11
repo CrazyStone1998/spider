@@ -114,7 +114,7 @@ class OtherItemPipeline(object):
               'value (%s,%s,%s);'
         self.cursor.execute(sql, (
             item['director'],
-            True,
+            item['isMaster'],
             item['movie_id']
         ))
         self.connect.commit()
@@ -123,7 +123,7 @@ class OtherItemPipeline(object):
         sql = 'insert into spider.movie_screenwriter_relation(is_master, movie_id, screenwriter) ' \
               'value (%s,%s,%s);'
         self.cursor.execute(sql, (
-            True,
+            item['isMaster'],
             item['movie_id'],
             item['screenwriter']
         ))

@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+import time
 
 from movieInfoSpider.tools.selenium_tool import SeleniumLogin
 import scrapy
@@ -23,7 +24,7 @@ class doubanSpider(scrapy.Spider):
 
     def start_requests(self):
 
-        status, self.cookies = SeleniumLogin().login_douban('13653399918', '136Shijunyu@6')
+        status, self.cookies = SeleniumLogin().login_douban('18340018118', '1997XIAO')
 
         # https://movie.douban.com/j/new_search_subjects?sort=R&range=0,10&tags=电影&start=0&genres=剧情
         # sort = U,T,S,R
@@ -44,7 +45,7 @@ class doubanSpider(scrapy.Spider):
 
         for s in sort:
             for g in genre:
-                for n in range(1):
+                for n in range(5):
                     yield scrapy.Request(
                         url=starter_douban.format(sort=s, genre=g, num=n * 20),
                         callback=self.parse,
@@ -53,6 +54,7 @@ class doubanSpider(scrapy.Spider):
                     )
 
     def parse(self, response):
+
         print('-----------------------------电影界面 获取json列表-----------------------------')
 
         result = json.loads(response.text)
@@ -121,6 +123,7 @@ class doubanSpider(scrapy.Spider):
             item_movie_genre_relation['genre'] = each
             yield item_movie_genre_relation
 
+        director_flag = True
         for url, name in url_director:
             item_director = items.DirectorScreenwriter()
             item_director['url_douban'] = url
@@ -131,9 +134,11 @@ class doubanSpider(scrapy.Spider):
             item_movie_director_relation = items.MovieDirectorRelation()
             item_movie_director_relation['movie_id'] = movie['id']
             item_movie_director_relation['director'] = name
-            item_movie_director_relation['isMaster'] = True
+            item_movie_director_relation['isMaster'] = director_flag
+            director_flag = False
             yield item_movie_director_relation
 
+        screenwriter_flag = True
         for url, name in url_screenwriter:
             item_screenwriter = items.DirectorScreenwriter()
             item_screenwriter['url_douban'] = url
@@ -144,7 +149,8 @@ class doubanSpider(scrapy.Spider):
             item_movie_screenwriter_relation = items.MovieScreenwriterRelation()
             item_movie_screenwriter_relation['movie_id'] = movie['id']
             item_movie_screenwriter_relation['screenwriter'] = name
-            item_movie_screenwriter_relation['isMaster'] = True
+            item_movie_screenwriter_relation['isMaster'] = screenwriter_flag
+            screenwriter_flag = False
             yield item_movie_screenwriter_relation
 
         for url, name in url_starring:
@@ -162,8 +168,6 @@ class doubanSpider(scrapy.Spider):
         # https://movie.douban.com/subject/6981153/comments?start=20&limit=20&sort=new_score&status=P
 
         comment_url = 'https://movie.douban.com/subject/{id}/comments?start={num}&limit=20&sort=new_score&status=P'
-        comment_num = response.xpath('//*[@id="comments-section"]/div[1]/h2/span/a/text()') \
-            .extract_first().split(' ')[1]
 
         # yield Request(
         #     url=comment_url.format(id=movie.get('id'), num=0),
@@ -183,9 +187,6 @@ class doubanSpider(scrapy.Spider):
             )
 
         # 　解析　长评
-        review_num = \
-            response.xpath('//*[@id="content"]/div[2]/div[1]/section/header/h2/span/a/text()') \
-                .extract_first().split(' ')[1]
         review_url = 'https://movie.douban.com/subject/{id}/reviews?start={num}'
 
         # yield Request(
@@ -196,7 +197,7 @@ class doubanSpider(scrapy.Spider):
         #     cookies=self.cookies,
         # )
 
-        for page in range(10):
+        for page in range(5):
             yield Request(
                 url=review_url.format(id=movie.get('id'), num=page * 20),
                 meta={'movie': movie},
@@ -262,7 +263,8 @@ class doubanSpider(scrapy.Spider):
 
         review_list = response.xpath('//*[@class="review-list  "]/div')
         for each in review_list:
-            username = each.xpath('.//*[@class="name"]/text()').extract_first()
+            username_raw = each.xpath('.//*[@class="name"]/text()').extract_first()
+            username = emoji.demojize(username_raw)
             url_douban = each.xpath('.//*[@class="avator"]/@href').extract_first()
             user_id_douban = url_douban.split('/')[-2]
             icon = each.xpath('.//*[contains(@src,"icon")]/@src').extract_first()
@@ -303,7 +305,6 @@ class doubanSpider(scrapy.Spider):
 
         print('-------------------------------解析 用户界面，跳转短评list界面，跳转影评list界面----------------------------')
 
-        user = response.meta['user']
         user = response.meta['user']
 
         comment_url = 'https://movie.douban.com/people/{id}/collect?start={num}&sort=time&rating=all&filter=all&mode=grid'
@@ -398,13 +399,6 @@ class doubanSpider(scrapy.Spider):
                 './/*[contains(@href,"subject")]/@href').extract_first()
             movie_id = movie_url.split('/')[-2]
 
-            # print('comment_content:', comment_content)
-            # print('comment_date   :', comment_date)
-            # print('rate           :', rate)
-            # print('rate_raw       :', rate_raw)
-            # print('movie_id       :', movie_id)
-            # print('movie_url      :', movie_url)
-
             item_comment = items.Comment()
             item_comment['user_id'] = user['id_douban']
             item_comment['movie_id'] = movie_id
@@ -422,71 +416,6 @@ class doubanSpider(scrapy.Spider):
             #     headers=self.header,
             #     cookies=self.cookies,
             # )
-
-    def parse_comment_save_douban(self, response):
-        print('解析 用户界面的评论')
-
-        user = response.meta['user']
-        comment_content = response.meta['comment_content']
-        comment_date = response.meta['comment_date']
-        comment_rate = response.meta['rate']
-        movie_url = response.meta['movie_url']
-
-        info = response.xpath('//*[@id="info"]/span')
-        url_director = zip(info[0].xpath('.//*[@class="attrs"]/a/@href').extract(),
-                           info[0].xpath('.//*[@class="attrs"]/a/text()').extract())
-
-        url_screenwriter = zip(info[1].xpath('.//*[@class="attrs"]/a/@href').extract(),
-                               info[1].xpath('.//*[@class="attrs"]/a/text()').extract())
-
-        url_starring = zip(info[2].xpath('.//*[@class="attrs"]/a/@href').extract(),
-                           info[2].xpath('.//*[@class="attrs"]/a/text()').extract())
-
-        title = response.xpath('//*[@property="v:itemreviewed"]/text()').extract_first()
-        cover = response.xpath('//*[@id="mainpic"]/a/img/@src').extract_first()
-        rate = response.xpath('//*[@id="interest_sectl"]/div[1]/div[2]/strong/text()').extract_first()
-        genre = response.xpath('//*[@property="v:genre"]/text()').extract()
-        release_date, area = response.xpath('//*[@property="v:initialReleaseDate"]/text()').extract()[0].split('(')
-        length = response.xpath('//*[@property="v:runtime"]/@content').extract_first()
-        url_imdb = response.xpath('//*[contains(@href,"imdb")]/@href').extract_first()
-        rating_people = response.xpath('//*[@property="v:votes"]/text()').extract_first()
-        language = response.xpath('//*[@id="info"]/text()').extract()[10][1:]
-
-        for each in url_screenwriter:
-            print(each)
-        print()
-        for each in url_director:
-            print(each)
-        print()
-        for each in url_starring:
-            print(each)
-
-        print('genre         :', genre)
-
-        print('name          :', title)
-        print('area          :', area)
-        print('language      :', language)
-        print('length        :', length)
-        print('cover_url     :', cover)
-        print('rate          :', rate)
-        print('release_data  :', release_date)
-        print('rating_people :', rating_people)
-        print('url_imdb      :', url_imdb)
-        print('url_douabn    :', movie_url)
-
-        item_movie = items.Movie()
-        item_movie['name'] = title
-        item_movie['area'] = area
-        item_movie['language'] = language
-        item_movie['length'] = length
-        item_movie['cover_url'] = cover
-        item_movie['release_date'] = release_date
-        item_movie['rate'] = rate
-        item_movie['rate_num'] = rating_people
-        item_movie['url_imdb'] = url_imdb
-        item_movie['url_douban'] = movie_url
-
-        yield item_movie
 
     def parse_review_detail_douban(self, response):
         print('---------------------------------------解析 影评内容界面，储存Review等Item-------------------------------')

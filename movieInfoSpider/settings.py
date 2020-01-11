@@ -66,11 +66,11 @@ COOKIES_DEBUG = True
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
 
-   'movieInfoSpider.pipelinesMiddlewares.MovieItem.MovieItemPipeline': 500,
+   'movieInfoSpider.pipelinesMiddlewares.MovieItem.MovieItemPipeline': 300,
    'movieInfoSpider.pipelinesMiddlewares.OtherItem.OtherItemPipeline': 500,
-   'movieInfoSpider.pipelinesMiddlewares.ReviewItem.ReviewItemPipeline': 500,
+   'movieInfoSpider.pipelinesMiddlewares.ReviewItem.ReviewItemPipeline': 600,
    'movieInfoSpider.pipelinesMiddlewares.CommentItem.CommentItemPipeline': 500,
-   'movieInfoSpider.pipelinesMiddlewares.RepeatFilter.RepeatFilterPipeline': 300,
+   'movieInfoSpider.pipelinesMiddlewares.RepeatFilter.RepeatFilterPipeline': 200,
 
 }
 

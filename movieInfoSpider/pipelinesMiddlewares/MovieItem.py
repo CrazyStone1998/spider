@@ -28,7 +28,7 @@ class MovieItemPipeline(object):
 
     def _insert_movie(self, item):
         sql = 'insert into spider.movie' \
-              '(name,area,cover_url,language,length,rate,rate_num,release_date,url_douban,url_imdb) ' \
+              '(name,area,cover_url,language,length,rate,rate_num,release_date,url_douban,url_imdb,id_douban) ' \
               'value (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);'
         self.cursor.execute(sql, (
             item['name'],
@@ -40,6 +40,7 @@ class MovieItemPipeline(object):
             item['rate_num'],
             item['release_date'],
             item['url_douban'],
-            item['url_imdb']
+            item['url_imdb'],
+            item['id_douban']
         ))
         self.connect.commit()
