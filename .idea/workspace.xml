@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fed5a59-75da-4d6e-ad96-3c27332705ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae0bcb85-aed2-41a1-8e91-6fb67b26b2eb.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae0bcb85-aed2-41a1-8e91-6fb67b26b2eb/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/MovieItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/MovieItem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/OtherItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/OtherItem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/spiders/doubanSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/spiders/doubanSpider.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +77,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../douban_spider/douban_spider/pipelines.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../vscode_test/LeetCode" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RunManager" selected="Python.test">
@@ -166,27 +160,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:spider@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:spider@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@4c5c081d" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:spider@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@3e16e50" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:spider@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@5a410925" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -221,7 +195,8 @@
       <workItem from="1578668702639" duration="1548000" />
       <workItem from="1578670686963" duration="122000" />
       <workItem from="1578670918615" duration="638000" />
-      <workItem from="1578719510071" duration="1239000" />
+      <workItem from="1578719510071" duration="3868000" />
+      <workItem from="1579143029697" duration="27000" />
     </task>
     <servers />
   </component>
@@ -241,10 +216,10 @@
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
     <state x="552" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.44.1920.1036@0.44.1920.1036" timestamp="1578640198898" />
-    <state x="706" y="314" key="FileChooserDialogImpl" timestamp="1578642221912">
+    <state x="706" y="314" key="FileChooserDialogImpl" timestamp="1579143054329">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state x="706" y="314" key="FileChooserDialogImpl/0.44.1920.1036@0.44.1920.1036" timestamp="1578642221912" />
+    <state x="706" y="314" key="FileChooserDialogImpl/0.44.1920.1036@0.44.1920.1036" timestamp="1579143054329" />
     <state width="1285" height="240" key="GridCell.Tab.0.bottom" timestamp="1578668760195">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
