@@ -2,7 +2,6 @@ import pymysql
 from scrapy.exceptions import DropItem
 
 from movieInfoSpider import settings, items
-import hashlib
 
 
 class CommentItemPipeline(object):
@@ -19,8 +18,6 @@ class CommentItemPipeline(object):
         )
         self.cursor = self.connect.cursor()
 
-
-
     def close_spider(self, spider):
         self.connect.close()
 
@@ -35,7 +32,9 @@ class CommentItemPipeline(object):
         print(type(item['votes']))
         print(item['votes'])
 
-        sql = 'insert into spider.comment(user_id,movie_id,rate,votes,content,date) ' \
+        sql_duplicate = ''
+
+        sql = 'insert into comment(user_id,movie_id,rate,votes,content,date) ' \
               'value (%s,%s,%s,%s,%s,%s)'
         self.cursor.execute(sql, (
             item['user_id'],
@@ -46,4 +45,3 @@ class CommentItemPipeline(object):
             item['date']
         ))
         self.connect.commit()
-

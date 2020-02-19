@@ -10,7 +10,6 @@ import emoji
 
 
 class doubanSpider(scrapy.Spider):
-
     name = 'doubanSpider'
 
     header = {
@@ -24,34 +23,39 @@ class doubanSpider(scrapy.Spider):
 
     def start_requests(self):
 
-        status, self.cookies = SeleniumLogin().login_douban('18340018118', '1997XIAO')
-
+        # status, self.cookies = SeleniumLogin().login_douban('18340018316', 'doubanspider')
+        # print("cookies\n", self.cookies)
         # https://movie.douban.com/j/new_search_subjects?sort=R&range=0,10&tags=电影&start=0&genres=剧情
         # sort = U,T,S,R
 
-        sort = ['U', 'T', 'S', 'R']
+        sort = ['U', 'T', 'S']
 
         genre = ['剧情', '喜剧', '动作', '爱情', '科幻', '动画', '悬疑', '惊悚',
                  '恐怖', '犯罪', '同性', '音乐', '歌舞', '传记', '历史', '战争',
                  '西部', '奇幻', '冒险', '灾难', '武侠', '情色', ]
         starter_douban = 'https://movie.douban.com/j/new_search_subjects?sort={sort}&range=0,10&tags=电影&start={num}&genres={genre}'
 
-        # yield scrapy.Request(
-        #     url='https://movie.douban.com/j/new_search_subjects?sort=U&range=0,10&tags=电影&start=0&genres=剧情',
-        #     callback=self.parse,
-        #     headers=self.header,
-        #     cookies=self.cookies,
-        # )
+        yield scrapy.Request(
+            url='https://movie.douban.com/j/new_search_subjects?sort=U&range=0,10&tags=电影&start=0&genres=剧情',
+            callback=self.parse,
+            headers=self.header,
+            cookies={'push_noty_num': '0', 'ap_v': '0,6.0', 'push_doumail_num': '0',
+                     '__gads': 'ID=6c3a5ebe7ee9a79f:T=1582082901:S=ALNI_MYNoT1Bbqq4IBeeI_TActbcAPBEow',
+                     '__yadk_uid': 'CbSRm5cvL18aYlfBTJIPs2KsSpb5MXm9', '_pk_ses.100001.8cb4': '*',
+                     '_pk_ref.100001.8cb4': '%5B%22%22%2C%22%22%2C1582082901%2C%22https%3A%2F%2Faccounts.douban.com%2Fpassport%2Flogin%3Fsource%3Dmovie%22%5D',
+                     'ck': 'MxfP', '_pk_id.100001.8cb4': 'c5b5e966cf524dee.1582082901.1.1582082901.1582082901.',
+                     'dbcl2': '"208735309:cNG2zYTDs18"', 'bid': 'ycXMtbxq2rU'},
+        )
 
-        for s in sort:
-            for g in genre:
-                for n in range(5):
-                    yield scrapy.Request(
-                        url=starter_douban.format(sort=s, genre=g, num=n * 20),
-                        callback=self.parse,
-                        headers=self.header,
-                        cookies=self.cookies,
-                    )
+        # for s in sort:
+        #     for g in genre:
+        #         for n in range(500):
+        #             yield scrapy.Request(
+        #                 url=starter_douban.format(sort=s, genre=g, num=n * 20),
+        #                 callback=self.parse,
+        #                 headers=self.header,
+        #                 cookies=self.cookies,
+        #             )
 
     def parse(self, response):
 
@@ -59,158 +63,162 @@ class doubanSpider(scrapy.Spider):
 
         result = json.loads(response.text)
 
-        # yield Request(
-        #     url='https://movie.douban.com/subject/30176393/',
-        #     meta={'data': result['data'][0]},
-        #     callback=self.parse_movie_index_douban,
-        #     headers=self.header,
-        #     cookies=self.cookies,
-        # )
+        yield Request(
+            url='https://movie.douban.com/subject/25887288/',
+            meta={'data': result['data'][0]},
+            callback=self.parse_movie_index_douban,
+            headers=self.header,
+            cookies=self.cookies,
+        )
 
-        for movie in result['data']:
-            yield Request(
-                url=movie['url'],
-                meta={'data': movie},
-                callback=self.parse_movie_index_douban,
-                headers=self.header,
-                cookies=self.cookies,
-            )
+        # for movie in result['data']:
+        #     yield Request(
+        #         url=movie['url'],
+        #         meta={'data': movie},
+        #         callback=self.parse_movie_index_douban,
+        #         headers=self.header,
+        #         cookies=self.cookies,
+        #     )
 
     def parse_movie_index_douban(self, response):
 
         print('----------------------进入电影界面，解析短评入口、影评入口，储存movie，genre等item------------------------------------')
 
-        item_movie = items.Movie()
-
         movie = response.meta['data']
-
         info = response.xpath('//*[@id="info"]/span')
-        url_director = zip(info[0].xpath('.//*[@class="attrs"]/a/@href').extract(),
-                           info[0].xpath('.//*[@class="attrs"]/a/text()').extract())
-
-        url_screenwriter = zip(info[1].xpath('.//*[@class="attrs"]/a/@href').extract(),
-                               info[1].xpath('.//*[@class="attrs"]/a/text()').extract())
-
-        url_starring = zip(info[2].xpath('.//*[@class="attrs"]/a/@href').extract(),
-                           info[2].xpath('.//*[@class="attrs"]/a/text()').extract())
-
+        url_director = list(zip(info[0].xpath('.//*[@class="attrs"]/a/@href').extract(),
+                                info[0].xpath('.//*[@class="attrs"]/a/text()').extract()))
+        url_screenwriter = list(zip(info[1].xpath('.//*[@class="attrs"]/a/@href').extract(),
+                                    info[1].xpath('.//*[@class="attrs"]/a/text()').extract()))
+        url_starring = list(zip(info[2].xpath('.//*[@class="attrs"]/a/@href').extract(),
+                                info[2].xpath('.//*[@class="attrs"]/a/text()').extract()))
+        weight = response.xpath('//*[@class="rating_per"]/text()').extract()
         genre = response.xpath('//*[@property="v:genre"]/text()').extract()
-        release_date, area = response.xpath('//*[@property="v:initialReleaseDate"]/text()').extract()[0].split('(')
+        release_date = response.xpath('//*[@property="v:initialReleaseDate"]/text()').extract()[0].split('(')[0]
         length = int(response.xpath('//*[@property="v:runtime"]/@content').extract_first())
         url_imdb = response.xpath('//*[contains(@href,"imdb")]/@href').extract_first()
         rating_people = response.xpath('//*[@property="v:votes"]/text()').extract_first()
-        language = response.xpath('//*[@id="info"]/text()').extract()[10][1:]
+        language = response.xpath('//*[@id="info"]/text()').extract()[7 + len(genre)][1:]
+        area = response.xpath('//*[@id="info"]/text()').extract()[5 + len(genre)]
 
+        item_movie = items.Movie()
         item_movie['name'] = movie.get('title')
-        item_movie['area'] = area
-        item_movie['language'] = language
         item_movie['length'] = length
-        item_movie['cover_url'] = movie.get('cover')
+        item_movie['language'] = language
+        item_movie['area'] = area
         item_movie['release_date'] = release_date
         item_movie['rate'] = movie.get('rate')
         item_movie['rate_num'] = rating_people
+        item_movie['weight'] = ','.join(weight)
+        item_movie['cover_url'] = movie.get('cover')
         item_movie['url_imdb'] = url_imdb
         item_movie['url_douban'] = movie.get('url')
         item_movie['id_douban'] = movie.get('id')
         yield item_movie
 
         for each in genre:
-            item_genre = items.Genre()
-            item_genre['name'] = each
-            yield item_genre
             item_movie_genre_relation = items.MovieGenreRelation()
             item_movie_genre_relation['movie_id'] = movie.get('id')
             item_movie_genre_relation['genre'] = each
             yield item_movie_genre_relation
 
-        director_flag = True
+        dict_DirectorScreenwriter = {}
+        for url, name in url_screenwriter:
+            dict_DirectorScreenwriter[url] = [name, False, True]
         for url, name in url_director:
-            item_director = items.DirectorScreenwriter()
-            item_director['url_douban'] = url
-            item_director['name'] = name
-            item_director['isDirector'] = True
-            item_director['isScreenwriter'] = False
-            yield item_director
+            if dict_DirectorScreenwriter.get(url, None):
+                dict_DirectorScreenwriter[url][1] = True
+            else:
+                dict_DirectorScreenwriter[url] = [name, True, False]
+
+        # save item_DirectorScreenwriter
+        for key, value in dict_DirectorScreenwriter.items():
+            item_DirectorScreenwriter = items.DirectorScreenwriter()
+            item_DirectorScreenwriter['url_douban'] = 'https://movie.douban.com' + key
+            item_DirectorScreenwriter['name'] = value[0]
+            item_DirectorScreenwriter['isDirector'] = value[1]
+            item_DirectorScreenwriter['isScreenwriter'] = value[2]
+            yield item_DirectorScreenwriter
+
+        # item_movie_director_relation
+        for index, (url, name) in enumerate(url_director):
+            print(index, url, name)
             item_movie_director_relation = items.MovieDirectorRelation()
             item_movie_director_relation['movie_id'] = movie['id']
+            item_movie_director_relation['url'] = 'https://movie.douban.com' + url
             item_movie_director_relation['director'] = name
-            item_movie_director_relation['isMaster'] = director_flag
-            director_flag = False
+            item_movie_director_relation['ranking'] = index
             yield item_movie_director_relation
 
-        screenwriter_flag = True
-        for url, name in url_screenwriter:
-            item_screenwriter = items.DirectorScreenwriter()
-            item_screenwriter['url_douban'] = url
-            item_screenwriter['name'] = name
-            item_screenwriter['isDirector'] = False
-            item_screenwriter['isScreenwriter'] = True
-            yield item_screenwriter
+        # save item_movie_screenwriter_relation
+        for index, (url, name) in enumerate(url_screenwriter):
+            print(index,url,name)
             item_movie_screenwriter_relation = items.MovieScreenwriterRelation()
             item_movie_screenwriter_relation['movie_id'] = movie['id']
+            item_movie_screenwriter_relation['url'] = 'https://movie.douban.com' + url
             item_movie_screenwriter_relation['screenwriter'] = name
-            item_movie_screenwriter_relation['isMaster'] = screenwriter_flag
-            screenwriter_flag = False
+            item_movie_screenwriter_relation['ranking'] = index
             yield item_movie_screenwriter_relation
 
-        for url, name in url_starring:
+        for index, (url, name) in enumerate(url_starring):
+            print(index, url, name)
             item_starring = items.Starring()
-            item_starring['url_douban'] = url
+            item_starring['url_douban'] = 'https://movie.douban.com' + url
             item_starring['name'] = name
             yield item_starring
             item_movie_starring_relation = items.MovieStarringRelation()
             item_movie_starring_relation['movie_id'] = movie['id']
             item_movie_starring_relation['starring'] = name
+            item_movie_starring_relation['url'] = 'https://movie.douban.com' + url
+            item_movie_starring_relation['ranking'] = index
             yield item_movie_starring_relation
 
         # 解析 短评
-
         # https://movie.douban.com/subject/6981153/comments?start=20&limit=20&sort=new_score&status=P
 
         comment_url = 'https://movie.douban.com/subject/{id}/comments?start={num}&limit=20&sort=new_score&status=P'
 
-        # yield Request(
-        #     url=comment_url.format(id=movie.get('id'), num=0),
-        #     meta={'movie': movie},
-        #     callback=self.parse_movie_comment_douban,
-        #     headers=self.header,
-        #     cookies=self.cookies,
-        # )
+        yield Request(
+            url=comment_url.format(id=movie.get('id'), num=0),
+            meta={'movie': movie},
+            callback=self.parse_movie_comment_douban,
+            headers=self.header,
+            cookies=self.cookies,
+        )
 
-        for page in range(10):
-            yield Request(
-                url=comment_url.format(id=movie.get('id'), num=page * 20),
-                meta={'movie': movie},
-                callback=self.parse_movie_comment_douban,
-                headers=self.header,
-                cookies=self.cookies,
-            )
+        # for page in range(10):
+        #     yield Request(
+        #         url=comment_url.format(id=movie.get('id'), num=page * 20),
+        #         meta={'movie': movie},
+        #         callback=self.parse_movie_comment_douban,
+        #         headers=self.header,
+        #         cookies=self.cookies,
+        #     )
 
         # 　解析　长评
         review_url = 'https://movie.douban.com/subject/{id}/reviews?start={num}'
 
-        # yield Request(
-        #     url=review_url.format(id=movie.get('id'), num=0),
-        #     meta={'movie': movie},
-        #     callback=self.parse_movie_review_douban,
-        #     headers=self.header,
-        #     cookies=self.cookies,
-        # )
+        yield Request(
+            url=review_url.format(id=movie.get('id'), num=0),
+            meta={'movie': movie},
+            callback=self.parse_movie_review_douban,
+            headers=self.header,
+            cookies=self.cookies,
+        )
 
-        for page in range(5):
-            yield Request(
-                url=review_url.format(id=movie.get('id'), num=page * 20),
-                meta={'movie': movie},
-                callback=self.parse_movie_review_douban,
-                headers=self.header,
-                cookies=self.cookies,
-            )
+        # for page in range(5):
+        #     yield Request(
+        #         url=review_url.format(id=movie.get('id'), num=page * 20),
+        #         meta={'movie': movie},
+        #         callback=self.parse_movie_review_douban,
+        #         headers=self.header,
+        #         cookies=self.cookies,
+        #     )
 
     def parse_movie_comment_douban(self, response):
         print('------------------------------解析 短评界面，储存Comment、User等Item--------------------------------')
 
         movie = response.meta['movie']
-
         comment_list = response.xpath('//*[@class="comment-item"]')
 
         for each in comment_list:
@@ -306,9 +314,7 @@ class doubanSpider(scrapy.Spider):
         print('-------------------------------解析 用户界面，跳转短评list界面，跳转影评list界面----------------------------')
 
         user = response.meta['user']
-
         comment_url = 'https://movie.douban.com/people/{id}/collect?start={num}&sort=time&rating=all&filter=all&mode=grid'
-
         review_url = 'https://movie.douban.com/people/{id}/reviews'
         #
         # yield Request(
@@ -321,7 +327,7 @@ class doubanSpider(scrapy.Spider):
         # 处理短评
         for page in range(10):
             yield Request(
-                url=comment_url.format(id=user['id_douban'],num=page * 15),
+                url=comment_url.format(id=user['id_douban'], num=page * 15),
                 meta={'user': user},
                 callback=self.parse_user_comment_douban,
                 headers=self.header,
@@ -375,6 +381,7 @@ class doubanSpider(scrapy.Spider):
             review_url = each.xpath('.//*[contains(@href,"review")]/@href').extract_first()
             movie_url = each.xpath('.//*[contains(@href,"subject"]/href').extract_first()
             movie_id = movie_url.split('/')[-2]
+
             yield Request(
                 url=review_url,
                 meta={'user': user, 'movie_id': movie_id, 'movie_url': movie_url},
@@ -407,15 +414,6 @@ class doubanSpider(scrapy.Spider):
             item_comment['rate'] = rate
             item_comment['votes'] = 0
             yield item_comment
-
-            # yield Request(
-            #     url=movie_url,
-            #     meta={'user': user, 'movie_url': movie_url, 'comment_content': comment_content,
-            #           'comment_date': comment_date, 'rate': rate},
-            #     callback=self.parse_comment_save_douban,
-            #     headers=self.header,
-            #     cookies=self.cookies,
-            # )
 
     def parse_review_detail_douban(self, response):
         print('---------------------------------------解析 影评内容界面，储存Review等Item-------------------------------')

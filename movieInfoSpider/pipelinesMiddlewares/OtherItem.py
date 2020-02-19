@@ -61,7 +61,7 @@ class OtherItemPipeline(object):
         self.connect.commit()
 
     def _insert_genre(self, item):
-        sql = 'insert into spider.genre(name) ' \
+        sql = 'insert into genre(name) ' \
               'value (%s);'
 
         self.cursor.execute(sql, (
@@ -70,7 +70,7 @@ class OtherItemPipeline(object):
         self.connect.commit()
 
     def _insert_director_screenwriter(self, item):
-        sql = 'insert into spider.director_screenwriter(is_director, is_screenwriter, name, url_douban) ' \
+        sql = 'insert into director_screenwriter(is_director, is_screenwriter, name, url_douban) ' \
               'value (%s,%s,%s,%s);'
         self.cursor.execute(sql, (
             item['isDirector'],
@@ -81,7 +81,7 @@ class OtherItemPipeline(object):
         self.connect.commit()
 
     def _insert_starring(self, item):
-        sql = 'insert into spider.starring(name, url_douban) ' \
+        sql = 'insert into starring(name, url_douban) ' \
               'value (%s,%s);'
         self.cursor.execute(sql, (
 
@@ -92,7 +92,7 @@ class OtherItemPipeline(object):
         self.connect.commit()
 
     def _insert_movie_gener_relation(self, item):
-        sql = 'insert into spider.movie_genre_relation(genre, movie_id) ' \
+        sql = 'insert into movie_genre_relation(genre, movie_id) ' \
               'value (%s,%s);'
         self.cursor.execute(sql, (
             item['genre'],
@@ -101,30 +101,34 @@ class OtherItemPipeline(object):
         self.connect.commit()
 
     def _insert_movie_starring_relation(self, item):
-        sql = 'insert into spider.movie_starring_relation(movie_id, starrring) ' \
-              'value (%s,%s);'
+        sql = 'insert into movie_starring_relation(ranking,url,movie_id, starring) ' \
+              'value (%s,%s,%s,%s);'
         self.cursor.execute(sql, (
+            item['ranking'],
+            item['url'],
             item['movie_id'],
             item['starring']
         ))
         self.connect.commit()
 
     def _insert_movie_director_relation(self, item):
-        sql = 'insert into spider.movie_director_relation(director, is_master, movie_id) ' \
-              'value (%s,%s,%s);'
+        sql = 'insert into movie_director_relation(director, ranking, movie_id,url) ' \
+              'value (%s,%s,%s,%s);'
         self.cursor.execute(sql, (
             item['director'],
-            item['isMaster'],
-            item['movie_id']
+            item['ranking'],
+            item['movie_id'],
+            item['url']
         ))
         self.connect.commit()
 
     def _insert_movie_screenwriter_relation(self, item):
-        sql = 'insert into spider.movie_screenwriter_relation(is_master, movie_id, screenwriter) ' \
-              'value (%s,%s,%s);'
+        sql = 'insert into movie_screenwriter_relation(ranking, movie_id, screenwriter,url) ' \
+              'value (%s,%s,%s,%s);'
         self.cursor.execute(sql, (
-            item['isMaster'],
+            item['ranking'],
             item['movie_id'],
-            item['screenwriter']
+            item['screenwriter'],
+            item['url']
         ))
         self.connect.commit()

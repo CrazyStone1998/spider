@@ -34,7 +34,7 @@ class ReviewItemPipeline(object):
         print(item['rate'])
 
 
-        sql = 'insert into spider.review(content, date, movie_id, rate, title, user_id, votes) ' \
+        sql = 'insert into review(content, date, movie_id, rate, title, user_id, votes) ' \
               'values (%s,%s,%s,%s,%s,%s,%s);'
         self.cursor.execute(sql, [
             item['content'],

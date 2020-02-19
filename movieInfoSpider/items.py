@@ -17,13 +17,14 @@ class Movie(scrapy.Item):
 
     name = scrapy.Field()
     foreign_name = scrapy.Field()
-    area = scrapy.Field()
-    language = scrapy.Field()
     length = scrapy.Field()
-    cover_url = scrapy.Field()
+    language = scrapy.Field()
+    area = scrapy.Field()
     release_date = scrapy.Field()
     rate = scrapy.Field()
     rate_num = scrapy.Field()
+    weight = scrapy.Field()
+    cover_url = scrapy.Field()
     id_douban = scrapy.Field()
     url_imdb = scrapy.Field()
     url_douban = scrapy.Field()
@@ -40,13 +41,15 @@ class DirectorScreenwriter(scrapy.Item):
 
 class MovieDirectorRelation(scrapy.Item):
     movie_id = scrapy.Field()
+    url = scrapy.Field()
     director = scrapy.Field()
-    isMaster = scrapy.Field()
+    ranking = scrapy.Field()
 
 class MovieScreenwriterRelation(scrapy.Item):
     movie_id = scrapy.Field()
+    url = scrapy.Field()
     screenwriter = scrapy.Field()
-    isMaster = scrapy.Field()
+    ranking = scrapy.Field()
 
 class Genre(scrapy.Item):
     name = scrapy.Field()
@@ -65,6 +68,8 @@ class Starring(scrapy.Item):
     url_imdb = scrapy.Field()
 
 class MovieStarringRelation(scrapy.Item):
+    ranking = scrapy.Field()
+    url = scrapy.Field()
     movie_id = scrapy.Field()
     starring = scrapy.Field()
 

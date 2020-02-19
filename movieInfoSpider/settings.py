@@ -66,11 +66,11 @@ COOKIES_DEBUG = True
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
 
-   'movieInfoSpider.pipelinesMiddlewares.MovieItem.MovieItemPipeline': 300,
+   'movieInfoSpider.pipelinesMiddlewares.MovieItem.MovieItemPipeline': 200,
    'movieInfoSpider.pipelinesMiddlewares.OtherItem.OtherItemPipeline': 500,
    'movieInfoSpider.pipelinesMiddlewares.ReviewItem.ReviewItemPipeline': 600,
-   'movieInfoSpider.pipelinesMiddlewares.CommentItem.CommentItemPipeline': 500,
-   'movieInfoSpider.pipelinesMiddlewares.RepeatFilter.RepeatFilterPipeline': 200,
+   'movieInfoSpider.pipelinesMiddlewares.CommentItem.CommentItemPipeline': 300,
+   'movieInfoSpider.pipelinesMiddlewares.RepeatFilter.RepeatFilterPipeline': 100,
 
 }
 
@@ -98,7 +98,7 @@ ITEM_PIPELINES = {
 # DATABASE mysql
 MYSQL_HOST = '127.0.0.1'
 MYSQL_PORT = 3306
-MYSQL_DBNAME = 'recommendsystem'
+MYSQL_DBNAME = 'demo'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = ''
 MYSQL_CHARSET = 'utf8'

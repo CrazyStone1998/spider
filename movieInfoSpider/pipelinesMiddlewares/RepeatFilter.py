@@ -1,6 +1,6 @@
 import hashlib
 
-import pymysql
+import json
 from scrapy.exceptions import DropItem
 
 from movieInfoSpider import settings, items
@@ -24,6 +24,8 @@ class RepeatFilterPipeline(object):
 
     def close_spider(self, spider):
         pass
+        # with open('Duplicate.txt', 'w', encoding='utf8') as f:
+        #     f.write(json.dumps(list(self.movie_set)))
 
     def process_item(self, item, spider):
         if isinstance(item, items.Movie):
@@ -49,21 +51,21 @@ class RepeatFilterPipeline(object):
         elif isinstance(item, items.User):
             key = self.md5_utf8(item['id_douban'])
             if key in self.user_set:
-                raise DropItem('User: %s !!!'%(item['id_douban']))
+                raise DropItem('User: %s !!!' % (item['id_douban']))
             else:
                 self.user_set.add(key)
 
         elif isinstance(item, items.Starring):
             key = self.md5_utf8(item['name'])
             if key in self.starring_set:
-                raise DropItem('Starring: %s !!!'%(item['name']))
+                raise DropItem('Starring: %s !!!' % (item['name']))
             else:
                 self.starring_set.add(key)
 
         elif isinstance(item, items.Genre):
             key = self.md5_utf8(item['name'])
             if key in self.genre_set:
-                raise DropItem('Genre : %s Repeat !!!'%(item['name']))
+                raise DropItem('Genre : %s Repeat !!!' % (item['name']))
             else:
                 self.genre_set.add(key)
 
