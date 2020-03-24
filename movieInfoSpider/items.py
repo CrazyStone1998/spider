@@ -7,16 +7,18 @@
 
 import scrapy
 
+
 class User(scrapy.Item):
     username = scrapy.Field()
     icon = scrapy.Field()
     url = scrapy.Field()
     id_douban = scrapy.Field()
 
-class Movie(scrapy.Item):
 
+class Movie(scrapy.Item):
     name = scrapy.Field()
     foreign_name = scrapy.Field()
+    profile = scrapy.Field()
     length = scrapy.Field()
     language = scrapy.Field()
     area = scrapy.Field()
@@ -29,8 +31,8 @@ class Movie(scrapy.Item):
     url_imdb = scrapy.Field()
     url_douban = scrapy.Field()
 
-class DirectorScreenwriter(scrapy.Item):
 
+class DirectorScreenwriter(scrapy.Item):
     name = scrapy.Field()
     foreign_name = scrapy.Field()
     cover_url = scrapy.Field()
@@ -39,11 +41,13 @@ class DirectorScreenwriter(scrapy.Item):
     url_douban = scrapy.Field()
     url_imdb = scrapy.Field()
 
+
 class MovieDirectorRelation(scrapy.Item):
     movie_id = scrapy.Field()
     url = scrapy.Field()
     director = scrapy.Field()
     ranking = scrapy.Field()
+
 
 class MovieScreenwriterRelation(scrapy.Item):
     movie_id = scrapy.Field()
@@ -51,14 +55,17 @@ class MovieScreenwriterRelation(scrapy.Item):
     screenwriter = scrapy.Field()
     ranking = scrapy.Field()
 
+
 class Genre(scrapy.Item):
     name = scrapy.Field()
     foreign_name = scrapy.Field()
-    description =scrapy.Field()
+    description = scrapy.Field()
+
 
 class MovieGenreRelation(scrapy.Item):
     movie_id = scrapy.Field()
     genre = scrapy.Field()
+
 
 class Starring(scrapy.Item):
     name = scrapy.Field()
@@ -67,11 +74,13 @@ class Starring(scrapy.Item):
     url_douban = scrapy.Field()
     url_imdb = scrapy.Field()
 
+
 class MovieStarringRelation(scrapy.Item):
     ranking = scrapy.Field()
     url = scrapy.Field()
     movie_id = scrapy.Field()
     starring = scrapy.Field()
+
 
 class Comment(scrapy.Item):
     user_id = scrapy.Field()
@@ -81,6 +90,7 @@ class Comment(scrapy.Item):
     date = scrapy.Field()
     votes = scrapy.Field()
 
+
 class Review(scrapy.Item):
     user_id = scrapy.Field()
     movie_id = scrapy.Field()
@@ -89,10 +99,3 @@ class Review(scrapy.Item):
     votes = scrapy.Field()
     date = scrapy.Field()
     title = scrapy.Field()
-
-
-
-
-
-
-

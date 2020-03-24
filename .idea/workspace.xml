@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fed5a59-75da-4d6e-ad96-3c27332705ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Duplicate.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movieInfoSpider/Middlewares/Cookies.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/movieInfoSpider/Middlewares/UserAgent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Duplicate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Duplicate.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movieInfoSpider/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/CommentItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/CommentItem.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/MovieItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/MovieItem.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/OtherItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/OtherItem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/RepeatFilter.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/RepeatFilter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/ReviewItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/pipelinesMiddlewares/ReviewItem.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movieInfoSpider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/movieInfoSpider/spiders/doubanSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/spiders/doubanSpider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movieInfoSpider/tools/captcherImages/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/movieInfoSpider/tools/captcherImages/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,20 +43,6 @@
         <item name="demo@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="demo: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="demo@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="demo: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="movie_screenwriter_relation: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="demo@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="demo: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="movie_starring_relation: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -108,7 +89,29 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.demo">
+    <configuration name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="spider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/weblfasr_python3_demo" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/weblfasr_python3_demo/demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="selenium_tool" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="spider" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,12 +156,38 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="weblfasr_python3_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="spider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/weblfasr_python3_demo" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/weblfasr_python3_demo/weblfasr_python3_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.selenium_tool" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.weblfasr_python3_demo" />
+      <item itemvalue="Python.demo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.demo" />
+        <item itemvalue="Python.weblfasr_python3_demo" />
         <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
@@ -208,7 +237,17 @@
       <workItem from="1582027296310" duration="2470000" />
       <workItem from="1582033425936" duration="2653000" />
       <workItem from="1582040764381" duration="600000" />
-      <workItem from="1582075183276" duration="20528000" />
+      <workItem from="1582075183276" duration="20703000" />
+      <workItem from="1582331195058" duration="218000" />
+      <workItem from="1582368928485" duration="214000" />
+      <workItem from="1582590483188" duration="603000" />
+      <workItem from="1582989173311" duration="2929000" />
+      <workItem from="1583140891539" duration="12710000" />
+      <workItem from="1583159484341" duration="2505000" />
+      <workItem from="1583196103960" duration="387000" />
+      <workItem from="1583247815430" duration="665000" />
+      <workItem from="1583302966002" duration="636000" />
+      <workItem from="1585057932013" duration="1275000" />
     </task>
     <servers />
   </component>
@@ -228,26 +267,30 @@
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
     <state x="552" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.44.1920.1036@0.44.1920.1036" timestamp="1578640198898" />
-    <state x="706" y="314" key="FileChooserDialogImpl" timestamp="1579143054329">
+    <state x="684" y="387" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1583249026506">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state x="706" y="314" key="FileChooserDialogImpl/0.44.1920.1036@0.44.1920.1036" timestamp="1579143054329" />
-    <state width="1866" height="209" key="GridCell.Tab.0.bottom" timestamp="1582104853508">
+    <state x="684" y="387" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.44.1920.1036@0.44.1920.1036" timestamp="1583249026506" />
+    <state x="706" y="314" key="FileChooserDialogImpl" timestamp="1583303603314">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1866" height="209" key="GridCell.Tab.0.bottom/0.44.1920.1036@0.44.1920.1036" timestamp="1582104853508" />
-    <state width="1866" height="209" key="GridCell.Tab.0.center" timestamp="1582104853507">
+    <state x="706" y="314" key="FileChooserDialogImpl/0.44.1920.1036@0.44.1920.1036" timestamp="1583303603314" />
+    <state width="1866" height="165" key="GridCell.Tab.0.bottom" timestamp="1582991979999">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1866" height="209" key="GridCell.Tab.0.center/0.44.1920.1036@0.44.1920.1036" timestamp="1582104853507" />
-    <state width="1866" height="209" key="GridCell.Tab.0.left" timestamp="1582104853506">
+    <state width="1866" height="165" key="GridCell.Tab.0.bottom/0.44.1920.1036@0.44.1920.1036" timestamp="1582991979999" />
+    <state width="1866" height="165" key="GridCell.Tab.0.center" timestamp="1582991979998">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1866" height="209" key="GridCell.Tab.0.left/0.44.1920.1036@0.44.1920.1036" timestamp="1582104853506" />
-    <state width="1866" height="209" key="GridCell.Tab.0.right" timestamp="1582104853508">
+    <state width="1866" height="165" key="GridCell.Tab.0.center/0.44.1920.1036@0.44.1920.1036" timestamp="1582991979998" />
+    <state width="1866" height="165" key="GridCell.Tab.0.left" timestamp="1582991979997">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state width="1866" height="209" key="GridCell.Tab.0.right/0.44.1920.1036@0.44.1920.1036" timestamp="1582104853508" />
+    <state width="1866" height="165" key="GridCell.Tab.0.left/0.44.1920.1036@0.44.1920.1036" timestamp="1582991979997" />
+    <state width="1866" height="165" key="GridCell.Tab.0.right" timestamp="1582991979998">
+      <screen x="0" y="44" width="1920" height="1036" />
+    </state>
+    <state width="1866" height="165" key="GridCell.Tab.0.right/0.44.1920.1036@0.44.1920.1036" timestamp="1582991979998" />
     <state width="1866" height="300" key="GridCell.Tab.1.bottom" timestamp="1578038442579">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
@@ -272,10 +315,10 @@
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
     <state x="472" y="290" width="976" height="551" key="IDE.errors.dialog/0.44.1920.1036@0.44.1920.1036" timestamp="1578459038165" />
-    <state x="0" y="44" width="1920" height="1036" key="SettingsEditor" timestamp="1582091398480">
+    <state x="0" y="44" width="1920" height="1036" key="SettingsEditor" timestamp="1583248982023">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
-    <state x="0" y="44" width="1920" height="1036" key="SettingsEditor/0.44.1920.1036@0.44.1920.1036" timestamp="1582091398480" />
+    <state x="0" y="44" width="1920" height="1036" key="SettingsEditor/0.44.1920.1036@0.44.1920.1036" timestamp="1583248982023" />
     <state x="659" y="331" width="601" height="394" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1582100743622">
       <screen x="0" y="44" width="1920" height="1036" />
     </state>
@@ -296,6 +339,8 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/spider$gap.coverage" NAME="distence Coverage Results" MODIFIED="1578038358355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider/tools" />
     <SUITE FILE_PATH="coverage/spider$distence.coverage" NAME="distence Coverage Results" MODIFIED="1578053708251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider/tools" />
+    <SUITE FILE_PATH="coverage/spider$weblfasr_python3_demo.coverage" NAME="weblfasr_python3_demo Coverage Results" MODIFIED="1582991099321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/weblfasr_python3_demo" />
+    <SUITE FILE_PATH="coverage/spider$demo.coverage" NAME="demo Coverage Results" MODIFIED="1582991979979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/weblfasr_python3_demo" />
     <SUITE FILE_PATH="coverage/spider$selenium.coverage" NAME="selenium_tool Coverage Results" MODIFIED="1578049183463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movieInfoSpider/tools" />
     <SUITE FILE_PATH="coverage/spider$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1578049542104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spider$test.coverage" NAME="test Coverage Results" MODIFIED="1582104853492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

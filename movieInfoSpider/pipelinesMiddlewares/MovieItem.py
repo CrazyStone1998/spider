@@ -3,6 +3,7 @@ from movieInfoSpider import settings
 from movieInfoSpider import items
 from scrapy.exceptions import DropItem
 
+
 class MovieItemPipeline(object):
 
     def __init__(self):
@@ -29,8 +30,9 @@ class MovieItemPipeline(object):
     def _insert_movie(self, item):
         print('插入movie\n', item)
         sql = 'insert into movie' \
-              '(name,area,cover_url,language,length,rate,rate_num,release_date,url_douban,url_imdb,id_douban,weight) ' \
-              'value (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);'
+              '(name,area,cover_url,language,length,rate,rate_num,' \
+              'release_date,url_douban,url_imdb,id_douban,weight,profile) ' \
+              'value (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);'
         self.cursor.execute(sql, (
             item['name'],
             item['area'],
@@ -43,6 +45,7 @@ class MovieItemPipeline(object):
             item['url_douban'],
             item['url_imdb'],
             item['id_douban'],
-            item['weight']
+            item['weight'],
+            item['profile']
         ))
         self.connect.commit()

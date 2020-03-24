@@ -25,32 +25,32 @@ class OtherItemPipeline(object):
         if isinstance(item, items.User):
             self._insert_user(item)
             raise DropItem('Has Done')
-        elif isinstance(item, items.Genre):
-            self._insert_genre(item)
-            raise DropItem('Has Done')
-        elif isinstance(item, items.DirectorScreenwriter):
-            self._insert_director_screenwriter(item)
-            raise DropItem('Has Done')
-        elif isinstance(item, items.Starring):
-            self._insert_starring(item)
-            raise DropItem('Has Done')
-        elif isinstance(item, items.MovieGenreRelation):
-            self._insert_movie_gener_relation(item)
-            raise DropItem('Has Done')
-        elif isinstance(item, items.MovieDirectorRelation):
-            self._insert_movie_director_relation(item)
-            raise DropItem('Has Done')
-        elif isinstance(item, items.MovieScreenwriterRelation):
-            self._insert_movie_screenwriter_relation(item)
-            raise DropItem('Has Done')
-        elif isinstance(item, items.MovieStarringRelation):
-            self._insert_movie_starring_relation(item)
-            raise DropItem('Has Done')
+        # elif isinstance(item, items.Genre):
+        #     self._insert_genre(item)
+        #     raise DropItem('Has Done')
+        # elif isinstance(item, items.DirectorScreenwriter):
+        #     self._insert_director_screenwriter(item)
+        #     raise DropItem('Has Done')
+        # elif isinstance(item, items.Starring):
+        #     self._insert_starring(item)
+        #     raise DropItem('Has Done')
+        # elif isinstance(item, items.MovieGenreRelation):
+        #     self._insert_movie_gener_relation(item)
+        #     raise DropItem('Has Done')
+        # elif isinstance(item, items.MovieDirectorRelation):
+        #     self._insert_movie_director_relation(item)
+        #     raise DropItem('Has Done')
+        # elif isinstance(item, items.MovieScreenwriterRelation):
+        #     self._insert_movie_screenwriter_relation(item)
+        #     raise DropItem('Has Done')
+        # elif isinstance(item, items.MovieStarringRelation):
+        #     self._insert_movie_starring_relation(item)
+        #     raise DropItem('Has Done')
         else:
             return item
 
     def _insert_user(self, item):
-        sql = 'insert into spider.user(id_douban,username,icon,url) ' \
+        sql = 'insert into user(id_douban,username,icon,url) ' \
               'value (%s,%s,%s,%s);'
         self.cursor.execute(sql, (
             item['id_douban'],
